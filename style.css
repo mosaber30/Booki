@@ -49,7 +49,6 @@ body {
 a {
     text-decoration: none;
     color: var(--black);
-   
 }
 
 /***********************/
@@ -106,7 +105,24 @@ header {
     color: var(--black);
     text-align: center;
 }
+/* 
+.header__nav__link.active {
+    color: var(--main-color);
+    text-align: center;
+} */
 
+
+.header__nav__link::before {
+    content: "";
+    display: block;
+    height: 2px;
+} 
+/* 
+.header__nav__link.active::before {
+    width: 100%;
+    background-color: var(--main-color); 
+} */
+ 
 /***********************/
 /****** Search  ******/
 /***********************/
@@ -625,7 +641,7 @@ header {
   .footer__column__link:hover {
     text-decoration: underline;
   }
-  /************/
+ 
 
 /**********************************/
 /*****      MEDIA      ************/
@@ -642,7 +658,7 @@ header {
 }
 
 /* 768px - Small devices (vertical tablets, phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .main-container {
         padding: 0;
     }
@@ -650,14 +666,8 @@ header {
 
 /****** Header  ******/
 
-
-/* 1024px - Medium devices (horizontal tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    /* ... */
-}
-
 /* 768px - Small devices (vertical tablets, phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .header__logo-url {
         width: 100%;
         height: 80px;
@@ -673,19 +683,21 @@ header {
         width: 100%;
     }
 
-    .header__nav__link.inactive:hover {
-        color: var(--black);
-    }
-    
-    .header__nav__link.inactive::after {
-        width: 0%;
-        background-color: var(--main-color);
-        
+/* 
+    .header__nav__link::before {
+        display: none;
     }
 
-    .header__nav__link.inactive:hover::after {
-        width: 0%;
+    .header__nav__link::after {
+        content: "";
+        display: block;
+        height: 2px;
     }
+    
+    .header__nav__link.active::after {
+        width: 100%;
+        background-color: var(--main-color);
+    } */
 }
 
 /********  Search *********/
@@ -703,7 +715,7 @@ header {
 }
 
 /* 768px - Small devices (vertical tablets, phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .search {
         text-align: center;
         align-items: center;
@@ -755,7 +767,7 @@ header {
 }
 
 /* 768px - Small devices (vertical tablets, phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.hebergements__title {
 		padding: 0;
 		margin-bottom: 15px;
@@ -781,7 +793,7 @@ header {
 }
 
 /* 768px - Small devices (vertical tablets, phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.populaires__title {
 		padding: 0;
 		margin-bottom: 15px;
@@ -816,7 +828,7 @@ header {
 }
 
 /* 768px - Small devices (vertical tablets, phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.activities__cards {
 		flex-wrap: wrap;
 		height: 100%;
@@ -843,7 +855,7 @@ header {
 }
 
 /* 768px - Small devices (vertical tablets, phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .footer {
         flex-wrap: wrap;
         padding: 30px;
